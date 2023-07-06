@@ -1,0 +1,16 @@
+name.common
+population
+region
+capital
+
+
+
+name.common
+population
+region
+subregion
+capital
+tld //domain
+currencies.name 
+languages
+borders
