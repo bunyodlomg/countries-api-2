@@ -1,9 +1,10 @@
-const express =  require("express");
-const countryRoutes = require("./routes/country.routes.js")
+import express from "express";
+import countryRoutes from "./routes/country.routes.js"
 const app = express();
 
 app.use(express.json());
 
+app.use("/api", countryRoutes);
 
 
 app.listen(8080, ()=>{

@@ -2,7 +2,7 @@ name.common
 population
 region
 capital
-
+coatOfArms.svg
 
 
 name.common
@@ -14,3 +14,4 @@ tld //domain
 currencies.name 
 languages
 borders
+coatOfArms.svg

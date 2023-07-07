@@ -1,7 +1,9 @@
 import { Sequelize } from "sequelize";
 
-const db = new Sequelize("bunyod", "postgres", "bunny7617", {
+const db = new Sequelize("bunyod", "postgres", "postgres", 
+{
   host: "localhost",
+  port: 5432,
   dialect: "postgres",
 });
 
