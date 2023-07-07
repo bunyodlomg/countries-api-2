@@ -24,16 +24,17 @@ export async function getCountry(req, res) {
 }
 
 export async function getCountryFull(req, res) {
-  // try {
-  //   let name = req.params.name;
-  //   name = name.charAt(0).toUpperCase() + name.slice(1);
-  //   const result = await db.query(
-  //     `select "name.common", population, region, capital, subregion, tld, "coatOfArms.svg", borders, "coatOfArms.svg"  from country where "name.common" = '${name}'`
-  //   );
-  //   res.json(result);
-  // } catch (error) {
-  //   res.status(400).send({ message: error.message });
-  // }
+  try {
+    let name = req.params.name;
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+    const result = await db.query(
+      `select "name.common", population, region, capital, subregion, tld, "coatOfArms.svg", borders, "coatOfArms.svg"   from country where "name.common" = '${name}'`
+    );
+    //  
+    res.json(result);
+  } catch (error) {
+    res.status(400).send({ message: error.message });
+  }
 }
 
 export async function editCountry(req, res) {
