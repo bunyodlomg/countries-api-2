@@ -2,16 +2,16 @@ name.common
 population
 region
 capital
-coatOfArms.svg
-
+flags.svg
 
 name.common
 population
 region
-subregion
 capital
+coatOfArms.svg
+
+subregion
 tld //domain
 currencies.name 
 languages
 borders
-coatOfArms.svg
