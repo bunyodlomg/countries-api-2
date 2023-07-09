@@ -8,7 +8,7 @@ app.use("/api", countryRoutes);
 app.get("/", (req, res)=>{
     res.send("hello world");
 })
-
-app.listen(8080, ()=>{
+const port = process.env.PORT || 8080;
+app.listen(port, ()=>{
     console.log("run...");
 })
