@@ -5,7 +5,7 @@ export async function getCountryAll(req, res) {
   try {
     // const result = await db.query(`select name, population, region, capital, flagsvg, subregion, tld, borders from countries`);
     const result = await Country.findAll()
-    res.json(result[0]);
+    res.json(result);
   } catch (error) {
     res.status(400).send({
       message: error.message
