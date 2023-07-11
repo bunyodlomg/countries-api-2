@@ -15,6 +15,6 @@ export const Country = db.define('Country', {
   domain_name: DataTypes.STRING,
   alfa: DataTypes.STRING,
 });
-await Country.sync({force:true});
+await Country.sync();
 
 // [population, name,region,capital,nativename,subregion,capital,domen,currencies, languages, borders,flag,]
