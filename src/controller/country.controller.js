@@ -1,8 +1,10 @@
 import db from "../config/db.js";
+import { Country } from "../models/Country.model.js";
 
 export async function getCountryAll(req, res) {
   try {
-    const result = await db.query(`select name, population, region, capital, flagsvg, subregion, tld, borders from countries`);
+    // const result = await db.query(`select name, population, region, capital, flagsvg, subregion, tld, borders from countries`);
+    const result = await Country.findAll()
     res.json(result[0]);
   } catch (error) {
     res.status(400).send({
