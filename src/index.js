@@ -1,54 +1,63 @@
 import express from "express";
 import countryRoutes from "./routes/country.routes.js"
-import { Country } from "./models/Country.model.js";
+import {
+    Country
+} from "./models/Country.model.js";
 const app = express();
 
 app.use(express.json());
 
 app.use("/api", countryRoutes);
 
-app.get("/", (req, res)=>{
+app.get("/", (req, res) => {
     res.setHeader('Content-Type', 'text/html');
     res.send(`
     <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Rest countries api</title>
-  <style>
-  a {
-  box-shadow: inset 0 0 0 0 #54b3d6;
-  color: #54b3d6;
-  margin: 0 -.25rem;
-  padding: 0 .25rem;
-  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-}
-a:hover {
-  box-shadow: inset 100px 0 0 0 #54b3d6;
-  color: white;
-}
-  </style>
-</head>
+    <html lang="en">
 
-<body>
-  <h1>
-   GET: All countries: <a href="https://bunyod-countries.onrender.com/api/">https://bunyod-countries.onrender.com/api/</a>
-  <h1>
-  <br>
-  <h1>
-  GET: One country: <a href="https://bunyod-countries.onrender.com/api/Uzbekistan">https://bunyod-countries.onrender.com/api/{Uzbekistan}</a>
-  <h1>
-    <h1>
-  UPDATE: One country: <a href="https://bunyod-countries.onrender.com/api/Uzbekistan">https://bunyod-countries.onrender.com/api/{Uzbekistan}/</a>
-  <h1>
-</body>
-</html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rest countries api</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <style>
+            a {
+                box-shadow: inset 0 0 0 0 #54b3d6;
+                color: #54b3d6;
+                margin: 0 -.25rem;
+                padding: 0 .25rem;
+                transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+            }
+
+            a:hover {
+                box-shadow: inset 100px 0 0 0 #54b3d6;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>
+            GET: All countries: <a
+                href="https://bunyod-countries.onrender.com/api/"><i>https://bunyod-countries.onrender.com/api/</i></a>
+        </h3>
+        <h3>
+            GET: One country: <a
+                href="https://bunyod-countries.onrender.com/api/Uzbekistan"><i>https://bunyod-countries.onrender.com/api/{Uzbekistan}</i></a>
+        </h3>
+        <h3>
+            UPDATE: One country: <a
+                href="https://bunyod-countries.onrender.com/api/Uzbekistan"><i>https://bunyod-countries.onrender.com/api/{Uzbekistan}/</i></a>
+        </h3>
+    </body>
+
+    </html>
     `);
 })
 const port = process.env.PORT || 8080;
-app.listen(port, ()=>{
+app.listen(port, () => {
     console.log("run...");
 })
 // let data = [];
