@@ -23,6 +23,9 @@ app.get("/", (req, res) => {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
         <style>
+            body{
+                background: #FFC6AC;
+            }
             a {
                 box-shadow: inset 0 0 0 0 #54b3d6;
                 color: #54b3d6;
