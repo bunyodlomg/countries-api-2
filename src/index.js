@@ -34,6 +34,7 @@ app.get("/", (req, res) => {
             a:hover {
                 box-shadow: inset 100px 0 0 0 #54b3d6;
                 color: white;
+                content: "🖇️";
             }
         </style>
     </head>
