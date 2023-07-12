@@ -27,17 +27,14 @@ app.get("/", (req, res) => {
                 background: #FFC6AC;
             }
             a {
-                box-shadow: inset 0 0 0 0 #002A32;
-                color: #002A32;
-                margin: 0 -.25rem;
-                padding: 0 .25rem;
+                box-shadow: inset 0 0 0 0 #628395;
+                color: #628395;
                 transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
             }
 
             a:hover {
                 box-shadow: inset 100px 0 0 0 #002A32;
-                color: white;
-                content: "🖇️";
+                color: #002A32;
             }
         </style>
     </head>
