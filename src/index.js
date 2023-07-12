@@ -33,8 +33,8 @@ app.get("/", (req, res) => {
             }
 
             a:hover {
-                box-shadow: inset 100px 0 0 0 #002A32;
-                color: #002A32;
+                box-shadow: inset 100% 0 0 0 #002A32;
+                color: white;
             }
         </style>
     </head>
